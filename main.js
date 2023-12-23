@@ -1,9 +1,10 @@
 const sucursales = ['Urquiza' , ' Palermo' , ' y Olivos' ]
+const turnosReseva = ['Mañana' , 'Tarde' , ' y Noche' ]
 
 
-let in_reserva = prompt("Gracias por elegirnos, querés hacer una reserva? Estamos en " + sucursales)
+let in_reserva = prompt("Gracias por elegirnos, querés hacer una reserva?"); 
 if (in_reserva == "si") {
-    let sucursal = prompt("En qué sucursal querés reservar?");
+    let sucursal = prompt("En qué sucursal querés reservar? Estamos en " + sucursales);
     
     if (sucursal.toLowerCase() == "palermo"){
         alert("Reservaste en Suc. Palermo");
@@ -24,27 +25,39 @@ if (in_reserva == "si") {
 
     let nombre = prompt("Ingresá tu nombre y apellido");
     if (nombre !=""){
-        alert("El nombre que ingresaste es " + nombre )
-    }
+        alert("El nombre que ingresaste es " + nombre ) 
+
+        let horario =prompt("En qué momento del dia te gustaría venir? Abrimos de 10 a 20hs. " + "Las opciones de reserva son: " +turnosReseva );
+        /*if (horario == toLowerCase("mañana") || horario == toLowerCase("tarde") || horario == toLowerCase("noche"))..else...{*/
+            alert("Reservaremos para el turno de la " + horario + " a nombre de " + nombre)
+           
+        }
     else{
-        alert("Debe ingresar un nombre para poder realizar la reserva")
-    }   
+            alert("Debés ingresar un nombre para poder realizar la reserva")
+    } 
+
+    
+
+    
+
+    /*let cantidadClientes =parseInt(promt("Cuantos lugares te reservamos?"))
+    alert("Te reservaremos " + cantidadClientes)*/
     
 
 }
 else {
     
-    const cursos =  ['1. Barista y Arte latte ', '2. Arte latte avanzado ','3. Tostado de café ','4. Cocktelería con café ']
+    const cursos =  ['1. Barista y arte latte ', ' 2. Arte latte avanzado ',' 3. Tostado de café ',' 4. Cocktelería con café ']
     let hacerCurso = prompt("Te gustaría formarte como barista?");
     if (hacerCurso == "si") 
-        alert("Estos son los cursos que estamos ofreciendo actualmente" + cursos)
+        alert("Estos son los cursos que estamos ofreciendo actualmente: " + cursos)
     for (const curso of cursos){
         console.log(curso)
     }
     let info = prompt("Si querés que te enviemos info sobre los cursos, dejanos tu mail en este casillero")
     console.log(info);
-    if (info =="" || info == null) {
-        alert("Será la próxima!")
+    if (info =="" ||info =="null") {
+        alert("Será la próxima")
     }
     
     else {
